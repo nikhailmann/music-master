@@ -1,0 +1,129 @@
+html {
+    height:100%
+}
+
+body {
+    height: 100%;
+    margin: 0;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background: rgb(127,33,147);
+    background: radial-gradient(circle, rgba(127,33,147,1) 0%, rgba(115,38,146,1) 29%, rgba(126,46,168,1) 44%, rgba(58,28,77,1) 77%, rgba(28,13,43,1) 98%, rgba(4,4,4,1) 100%);
+}
+
+.selectGamemode {
+    background: rgb(213,246,251);
+    background: linear-gradient(82deg, rgba(213,246,251,1) 0%, rgba(27,191,216,1) 100%);
+    margin-top: 8%;
+    margin-left: 15%;
+    margin-right: 15%;
+    text-align: center;
+    align-items: center;
+    display:flex;
+    flex-direction: column;
+    border-radius: 35px;
+    padding: 20px 100px 75px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.gameStartBtns {
+    margin:auto;
+    justify-content: center;
+    display: flex;
+    flex-direction: row;
+    gap:12px;
+}
+
+.gameBeginBtn {
+    padding: 15px;
+    margin-top: 15px;
+    font-weight: bold;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    cursor: pointer;
+    color: white;
+}
+
+.gameBeginBtn:hover {
+    transition: 0.7s;
+    color: rgb(247, 216, 44);
+    border-color: rgb(247, 216, 44);
+}
+
+.gameBeginBtn:active {
+    transition: 0.2s;
+    border-width: 5px;
+}
+
+#topHitsBtn {
+    background-color: #650000;
+}
+
+#singleGenreBtn {
+    background-color: #00003E;
+}
+
+#allGenresBtn {
+    background-color: #014421;
+}
+
+.gameInterface {
+    text-align: center;
+    color: white;
+    font-weight: bolder;
+    align-items: center;
+    display:flex;
+    flex-direction: column;
+    border-radius: 35px;
+    padding: 10px 100px 75px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    display: none;
+}
+
+.artistSpaces {
+    display: flex;
+    flex-direction: row;
+    align-content: start;
+    gap: 100px;
+    margin: 0;
+    margin-top: 2%;
+}
+
+.artist1Info, .artist2Info {
+    flex-shrink: 0;
+}
+
+#artist1Name, #artist2Name {
+    font-size: 1.5vw;
+    font-weight: bolder;
+    margin-top: 10px;
+    padding: 10px;
+    background:none;
+    border: none;
+    color: white;
+}
+
+#artist1Name:hover, #artist2Name:hover {
+    color: gold;
+    transition: 0.5s;
+}
+
+#artist1Name:active, #artist2Name:active {
+    font-size:2.0vw;
+    transition: 0.5s;
+}
+
+#artist1Image, #artist2Image {
+    width: 100%;
+    height: auto;
+    max-width: 400px;
+    max-height: 400px;
+}
+
+#gameScore {
+    margin-top: 0px;
+    font-size: 25px;
+}
+
+
+
+

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Master</title>
+    <link rel="stylesheet" href = "gamestyles.css">
+    <script src="app.js"></script>
+</head>
+<body>
+    <div class="selectGamemode" id="gameMenu">
+        <div class="chooseText">
+            <h1 id="menuTitle">Success!</h1>
+            <h2 id="scoreCommentary"></h2>
+            <h3>To start, you can choose one of three categories: artists from the current top hits, a single, random genre, or all genres! Make your selection
+                with the respective button -- good luck!
+            </h3>
+            <div class="gameStartBtns">
+                <input class="gameBeginBtn" type="button" value="Top Hits" id="topHitsBtn" onclick="start(1)"><br/>
+                <input class="gameBeginBtn" type="button" value="Single Genre" id="singleGenreBtn" onclick="start(2)"><br/>
+                <input class="gameBeginBtn" type="button" value="All Genres" id="allGenresBtn" onclick="start(3)"><br/>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="gameInterface" id="gamePlaying">
+        <h1>Music Master</h1>
+        <h2>Who is more popular? Click Their Name!</h2>
+        <h3 id="currentGenre">Genre: </h3>
+        <div class="artistSpaces">
+            <div class="artist1Space">
+                <image class="artistImages" id = 'artist1Image'></image>
+                <div class="artist1Info">
+                    <input type="button" value="Artist1Name" id="artist1Name" onclick="userGuessedArtist1()"><br/>
+                    <h4 id="artist1Popularity"></h4>
+                </div>
+            </div>
+            <div class="artist2Space">
+                <image class="artistImages" id = 'artist2Image'></image>
+                <div class="artist2Info">
+                    <input type="button" value="Artist2Name" id="artist2Name" onclick="userGuessedArtist2()"><br/>
+                    <h4 id="artist2Popularity"></h4>
+                </div>
+            </div>
+        </div> 
+        <h3 id="gameScore">Score Here</h3>
+
+    </div>
+</body>
+</html>

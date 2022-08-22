@@ -1,0 +1,85 @@
+body {
+    background: rgb(190,0,0);
+    background: linear-gradient(90deg, rgba(190,0,0,1) 0%, 
+    rgba(69,1,1,1) 100%);
+}
+
+.container {
+    margin-left: 15%;
+    margin-right: 15%;
+    text-align: center;
+    align-items: center;
+    display:flex;
+    flex-direction: column;
+}
+
+.intro-text h1 {
+    color: white;
+}
+
+.intro-text h3 {
+    color: lightblue;
+}
+
+.row {
+    margin: 0;
+    padding: 60px 100px 100px;
+    font-size: larger;
+    font-family: 'Courier New', Courier, monospace;
+    background: rgb(232,197,32);
+    background: linear-gradient(0deg, rgba(232,197,32,1) 0%, rgba(249,76,233,1) 100%);
+    border-radius: 35px;
+}
+
+.mb-3 {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+
+.label-holder {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-label {
+    padding-bottom: 5px;
+}
+
+.form-control {
+    text-align: center;
+    min-width: 250px;
+    padding:5px;
+    font-size: 12px;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.btn {
+    margin-top: 15px;
+    background-color: darkblue;
+    color: white;
+    font-weight: bold;
+    padding: 10px;
+    cursor:  pointer;
+}
+
+.btn:hover {
+    color: darkblue;
+    background-color: white;
+    transition: 0.7s;
+}
+
+.btn:active {
+    transition: 0.2s;
+    background-color: aqua;
+    border-color: purple;
+    border-width: 5px;
+}
+
+#spLink {
+    color: aqua;
+}
+
+#spLink:hover {
+    color: azure;
+}
