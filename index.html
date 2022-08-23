@@ -1,57 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login - Music Master</title>
-    <link rel="stylesheet" href = "indexstyles.css">
+    <link rel="stylesheet" href="indexstyles.css">
     <script src="app.js"></script>
 </head>
+
 <body>
     <div class="container">
-        <div class="intro-text">
-            <h1>Music Master</h1>
-            <h3>
-                How well do you know music? This application uses the Spotify API to answer
-                that question. Each round, two artists will be displayed on the 
-                screen, and you must guess which one is more popular according to 
-                Spotify's calculated "popularity" index (a 0-100 score).
-            </h3>
-            <h3>
-                To play, you will need to create a free API login by going to 
-                <a href="https://developer.spotify.com/dashboard/" target="_blank" rel="noopener noreferrer" id="spLink">Spotify's developer dashboard</a> 
-                and logging in with your spotify account. From there, you must create an app with a title and a description (put anything you want there).
-                Once created, click on the app, and there you will see your Client ID and can press a button to reveal your Client Secret.
-                Enter them here and submit to begin!
+        <div id="content-wrap">
+            <div class="intro-text">
+                <h1>Music Master</h1>
+                <h3>
+                    How well do you know music? This application uses the Spotify API to answer
+                    that question. Each round, two artists will be displayed on the
+                    screen, and you must guess which one is more popular according to
+                    Spotify's calculated "popularity" index (a 0-100 score).
+                </h3>
+                <h3>
+                    To play, you will need to create a free API login by going to
+                    <a href="https://developer.spotify.com/dashboard/" target="_blank" rel="noopener noreferrer"
+                        id="spLink">Spotify's developer dashboard</a>
+                    and logging in with your spotify account. From there, you must create an app with a title and a
+                    description (put anything you want there).
+                    Once created, click on the app, and there you will see your Client ID and can press a button to
+                    reveal your Client Secret.
+                    Enter them here and submit to begin!
 
-            </h3>
-        </div>
+                </h3>
+            </div>
 
-        <div id="tokenSection" class="row">
-            <div class="col">
-                <div class="mb-3">
-                    <div class="label-holder">
-                    <label for="clientId" class="form-label">Client ID</label>
-                    <input type="text" class="form-control" id="clientId" placeholder="">
+            <div id="tokenSection" class="row">
+                <div class="col">
+                    <div class="mb-3">
+                        <div class="label-holder">
+                            <label for="clientId" class="form-label">Client ID</label>
+                            <input type="text" class="form-control" id="clientId" placeholder="">
+                        </div>
                     </div>
-                </div>
-                <div class="mb-3">
-                    <div class="label-holder">
-                        <label for="clientSecret" class="form-label">Client Secret</label>
-                        <input type="text" class="form-control" id="clientSecret" placeholder="">
+                    <div class="mb-3">
+                        <div class="label-holder">
+                            <label for="clientSecret" class="form-label">Client Secret</label>
+                            <input type="text" class="form-control" id="clientSecret" placeholder="">
+                        </div>
+
                     </div>
-                    
+                    <input class="btn" type="button" onclick="authorizeAttempt()" value="Request Authorization"><br />
                 </div>
-                <input class="btn" type="button" onclick="authorizeAttempt()" value="Request Authorization"><br/>
             </div>
         </div>
+        <footer>
+            <p id="footerNote">Created by @nikhailmann on github using Spotify's web-api.</p>
+        </footer>
     </div>
 
-
 </body>
-<footer>
-    <p id="footerNote">Created by @nikhailmann on github using Spotify's web-api.</p>
-</footer>
 
 </html>

@@ -11,6 +11,15 @@ body {
     background: radial-gradient(circle, rgba(127,33,147,1) 0%, rgba(115,38,146,1) 29%, rgba(126,46,168,1) 44%, rgba(58,28,77,1) 77%, rgba(28,13,43,1) 98%, rgba(4,4,4,1) 100%);
 }
 
+#page-container {
+    position: relative;
+    min-height: 100vh;
+}
+
+#content-wrap {
+    padding-bottom: 2.5rem;
+}
+
 .selectGamemode {
     background: rgb(213,246,251);
     background: linear-gradient(82deg, rgba(213,246,251,1) 0%, rgba(27,191,216,1) 100%);
@@ -22,8 +31,16 @@ body {
     display:flex;
     flex-direction: column;
     border-radius: 35px;
-    padding: 20px 100px 75px;
+    padding: 4% 15% 10%;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+#menuTitle, #scoreCommentary, #instructions {
+    width: 100%;
+}
+
+.chooseText {
+    width: 100%;
 }
 
 .gameStartBtns {
@@ -31,7 +48,8 @@ body {
     justify-content: center;
     display: flex;
     flex-direction: row;
-    gap:12px;
+    gap:3.5%;
+    width: 95%;
 }
 
 .gameBeginBtn {
@@ -41,6 +59,9 @@ body {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     cursor: pointer;
     color: white;
+    width: 40%;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .gameBeginBtn:hover {
@@ -127,15 +148,40 @@ body {
 footer {
     position: fixed;
     bottom: 0;
-    right: 0;
-    padding-right: 10px;
+    width: 100%;
+    height:2.5rem;
+    text-align: right;
 }
 
 #footerNote {
     font-size: 14px;
     color: white;
+    padding-right: 5px;
 }
 
+@media (max-width: 700px) {
+    .chooseText {
+        width: 90%;
+    }
+    #menuTitle {
+        font-size: 25px;
+    }
+    #instructions {
+        font-size: 15px;
+    }
+    #scoreCommentary {
+        font-size: 20px;
+    }
+    .gameStartBtns {
+        width: 100%;
+        gap: 0.5%;
+        flex-direction: column;
+    }
+    .gameBeginBtn {
+        width: 100%;
+        margin: 0;
+    }
+}
 
 
 
