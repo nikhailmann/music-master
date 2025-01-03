@@ -84,10 +84,10 @@ async function getCategories () {
     }
 }
 
-async function getGenrePlaylists (genreId) {
+async function getGenrePlaylists (genreName) {
     let token = getTokenFromLocalStorage();
     try {
-        const res = await fetch('https://api.spotify.com/v1/browse/categories/' + genreId + '/playlists?limit=50&', {
+        const res = await fetch('https://api.spotify.com/v1/search?q=' + genreName + '&type=playlist&limit=50&', {
             method: 'GET',
             headers: {
                 'Authorization' : 'Bearer ' + token
@@ -167,9 +167,10 @@ async function getARandomArtistHelper (gameType) { //1 - top hits 2 - singe rand
         console.log('genreIndex ' + genreIndex);
         console.log(genres[genreIndex]);
         let currGenreId = genres[genreIndex].id;
+        let currGenreName = genres[genreIndex].name;
 
         // get list of playlists
-        let playlists = await getGenrePlaylists(currGenreId); // size of playlists may not necessarily be 49.. could be less //[array].length
+        let playlists = await getGenrePlaylists(currGenreName); // size of playlists may not necessarily be 49.. could be less //[array].length
         let playlistIndex = randomIntFromInterval(0, playlists.length-1);
         //console.log('playlistindex ' + playlistIndex);
         //console.log(playlists[playlistIndex]);
